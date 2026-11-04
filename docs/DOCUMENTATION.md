@@ -81,6 +81,7 @@ document store. Full detail in `MongoDB_Design.md`.
 - **Transactions** (`06_transactions.sql`): atomic admit+bill, with a COMMIT and a ROLLBACK example.
 - **MongoDB** (`database/mongodb/`): 3 collections, indexes, 5 aggregation pipelines.
 - **Web app** (`app/`): Next.js App Router, JWT+bcrypt auth, row-level access (doctors see only assigned patients, patients only themselves), 23 API routes, forms, server-side search and filters, role dashboards, analytics.
+- **ALTER and DELETE** (`09_alter_and_delete.sql`): `ALTER TABLE` adds columns (`Consultation_Fee`, `Reorder_Level`), a CHECK constraint and indexes, and widens a column; `UPDATE` and `DELETE` show conditional deletes and `ON DELETE CASCADE` (deleting a patient removes their contacts and appointments). Deleting a doctor with appointments fails by design (`ON DELETE RESTRICT`).
 - **Data repair** (`08_fix_bed_status.sql`): marks beds with an active admission as Occupied (fixes a seed-order issue where Admission 1 was inserted before the triggers existed).
 
 ## 8. Important queries

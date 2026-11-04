@@ -80,6 +80,8 @@ mysql -u root -p < database/mysql/06_transactions.sql
 mysql -u root -p < database/mysql/07_queries.sql
 # 08 repairs bed statuses if you loaded an older seed (safe to re-run):
 mysql -u root -p < database/mysql/08_fix_bed_status.sql
+# 09 demonstrates ALTER TABLE and DELETE (incl. ON DELETE CASCADE) — run once:
+mysql -u root -p < database/mysql/09_alter_and_delete.sql
 ```
 
 ### 3. Load the document database
